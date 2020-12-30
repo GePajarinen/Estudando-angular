@@ -14,6 +14,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -40,6 +41,7 @@ import springfox.documentation.annotations.ApiIgnore;
 @Api(tags = "Cliente")
 @RestController
 @RequestMapping("/api/clientes")
+@CrossOrigin("http://localhost:4200")
 public class ClienteResource {
 		
 	@Autowired
@@ -53,7 +55,7 @@ public class ClienteResource {
 
 	
 	//LISTAR CLIENTES
-	@ApiImplicitParams(   
+	/*@ApiImplicitParams(   
 		{@ApiImplicitParam(name = "Authorization", 
 			value = "Bearer Token", 
 			required = true, 
@@ -69,14 +71,17 @@ public class ClienteResource {
 			dataType = "integer", 
 			paramType = "query",
 	    	value = "Quantidade de registros", 
-	    	defaultValue = "3")})
+	    	defaultValue = "3")})*/
 	@ApiOperation("Lista de clientes")
 	@GetMapping
-	public Page<Cliente> listarClientes(
+	/*public Page<Cliente> listarClientes(
 			@PageableDefault(page = 0, size = 3) 
 			@ApiIgnore Pageable paginacao){
 		 
 		return cr.findAll(paginacao);
+	}*/
+	public List<Cliente> listarClientes(){
+		return cr.findAll();
 	}
 	
 		

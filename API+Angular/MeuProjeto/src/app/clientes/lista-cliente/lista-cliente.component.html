@@ -1,0 +1,25 @@
+
+<div class="container main-container" style="padding-top: 30px; padding-bottom: 50px;">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Documento</th>
+            <th scope="col">Data de cadastro</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        <tr *ngFor="let cliente of clientes" >
+            <th scope="row">{{ cliente.id }}</th>
+            <td>{{ cliente.nome }}</td>
+            <td>{{ cliente.email }}</td>
+            <td>{{ cliente.documento }}</td>
+            <td>{{ cliente.dataCadastro }}</td>
+            
+        </tr>
+        </tbody>
+  </table>
+</div>

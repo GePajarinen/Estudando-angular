@@ -21,6 +21,8 @@ import { VendaService } from './vendas/vendas.service';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
 import { ListaVendaComponent } from './vendas/lista-venda/lista-venda.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ListaClienteComponent } from './clientes/lista-cliente/lista-cliente.component';
+import { ClienteService } from './clientes/clientes.service';
 
 
 
@@ -34,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContatoComponent,
     DataBindingComponent,
     ListaProdutoComponent,
-    ListaVendaComponent,  
+    ListaVendaComponent,
+    ListaClienteComponent,  
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     ProdutoService,
     VendaService,
+    ClienteService,
     {provide: APP_BASE_HREF, useValue: '/'}
   ],
   bootstrap: [AppComponent]
