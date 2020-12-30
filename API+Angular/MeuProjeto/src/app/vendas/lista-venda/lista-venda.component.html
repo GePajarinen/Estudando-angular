@@ -1,0 +1,20 @@
+
+<div class="container main-container" style="padding-top: 30px; padding-bottom: 50px;">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Total</th>
+            <th scope="col">Data</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        <tr *ngFor="let venda of vendas" >
+            <th scope="row">{{ venda.id }}</th>
+            <td>{{ venda.totalCompra }}</td>
+            <td>{{ venda.dataCompra }}</td>
+        </tr>
+        </tbody>
+  </table>
+</div>

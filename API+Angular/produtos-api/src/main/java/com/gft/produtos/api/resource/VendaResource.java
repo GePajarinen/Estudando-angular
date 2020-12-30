@@ -14,6 +14,7 @@ import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,6 +44,7 @@ import io.swagger.annotations.ApiParam;
 @Api(tags = "Venda")
 @RestController
 @RequestMapping("/api/vendas")
+@CrossOrigin("http://localhost:4200")
 public class VendaResource {
 	
 	@Autowired

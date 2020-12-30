@@ -17,7 +17,9 @@ import { ContatoComponent } from './institucional/contato/contato.component';
 import { rootRouterConfig } from './app.routes';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { ProdutoService } from './produtos/produtos.service';
+import { VendaService } from './vendas/vendas.service';
 import { ListaProdutoComponent } from './produtos/lista-produto/lista-produto.component';
+import { ListaVendaComponent } from './vendas/lista-venda/lista-venda.component';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -31,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     SobreComponent,
     ContatoComponent,
     DataBindingComponent,
-    ListaProdutoComponent
+    ListaProdutoComponent,
+    ListaVendaComponent,  
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
     ProdutoService,
+    VendaService,
     {provide: APP_BASE_HREF, useValue: '/'}
   ],
   bootstrap: [AppComponent]
