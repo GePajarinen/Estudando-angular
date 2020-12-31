@@ -10,16 +10,16 @@ import { ReactiveFormsModule } from '@angular/forms';
   templateUrl: './adicionar-cliente.component.html'
 })
 export class AdicionarClienteComponent {
-  
+  /*
   constructor(private clienteService: ClienteService) { }
   form: FormGroup;
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      nome: new FormControl(''),
-      documento: new FormControl(''),
-      senha: new FormControl(''),
-      email: new FormControl('')
+      nome: '',
+      documento: '',
+      senha: '',
+      email: ''
     });
 
   }
@@ -27,7 +27,7 @@ export class AdicionarClienteComponent {
   submit() {
     return this.clienteService.adicionarCliente(this.form);
   }
-
+*/
   
 
 
