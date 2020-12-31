@@ -15,6 +15,7 @@ export class ListaClienteComponent implements OnInit {
   
   
   remove(id: string) {
+    console.log("Ate componente");
    this.clienteService.remove(id).subscribe();
   }
   

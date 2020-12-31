@@ -20,9 +20,16 @@ constructor(private http: HttpClient) {}
     }
 
     /** DELETE: delete the cliente from the server */
-    remove(id: string) {
+    /*remove(id: string) {
         return this.http.delete(this.UrlServiceV2 + '/' + id);
+    }*/
+
+    remove(id: string): Observable<{}> {
+        console.log("Ate service");
+        const url = `${this.UrlServiceV2}/${id}`; // DELETE api/clientes/2
+        return this.http.delete(url);
     }
+
   
 
 }
