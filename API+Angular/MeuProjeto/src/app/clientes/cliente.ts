@@ -4,6 +4,7 @@ export class Cliente{
     email!: string;
     documento!: string;
     dataCadastro!: string;
+  
 	
 	
 }

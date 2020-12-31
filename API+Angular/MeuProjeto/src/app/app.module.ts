@@ -23,6 +23,7 @@ import { ListaVendaComponent } from './vendas/lista-venda/lista-venda.component'
 import { HttpClientModule } from '@angular/common/http';
 import { ListaClienteComponent } from './clientes/lista-cliente/lista-cliente.component';
 import { ClienteService } from './clientes/clientes.service';
+import { ProdutoDetalheComponent } from './produtos/produto-detalhe/produto-detalhe.component';
 
 
 
@@ -37,7 +38,8 @@ import { ClienteService } from './clientes/clientes.service';
     DataBindingComponent,
     ListaProdutoComponent,
     ListaVendaComponent,
-    ListaClienteComponent,  
+    ListaClienteComponent,
+    ProdutoDetalheComponent,  
   ],
   imports: [
     BrowserModule,

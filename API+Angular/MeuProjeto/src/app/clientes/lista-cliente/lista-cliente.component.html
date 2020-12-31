@@ -8,6 +8,7 @@
             <th scope="col">E-mail</th>
             <th scope="col">Documento</th>
             <th scope="col">Data de cadastro</th>
+            <th scope="col"></th>
         </tr>
         </thead>
         
@@ -18,7 +19,7 @@
             <td>{{ cliente.email }}</td>
             <td>{{ cliente.documento }}</td>
             <td>{{ cliente.dataCadastro }}</td>
-            
+            <td><a href="" ng-click="remove({{cliente.id}})" class="btn btn-danger btn-sm">Deletar</a></td>
         </tr>
         </tbody>
   </table>
