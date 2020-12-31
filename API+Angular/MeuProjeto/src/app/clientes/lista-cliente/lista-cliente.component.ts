@@ -9,13 +9,17 @@ import { ClienteService } from '../clientes.service';
 export class ListaClienteComponent implements OnInit {
 
   constructor(private clienteService: ClienteService) { }
+  
   public clientes: Cliente[] | undefined;
   public cliente!: Cliente;
  
-  
+ /*
+  adicionar(){
+    this.clienteService.adicionarCliente().subscribe();
+  }
+  */
   
   remove(id: string) {
-    console.log("Ate componente");
    this.clienteService.remove(id).subscribe();
   }
   

@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListaClienteComponent } from './clientes/lista-cliente/lista-cliente.component';
 import { ClienteService } from './clientes/clientes.service';
 import { ProdutoDetalheComponent } from './produtos/produto-detalhe/produto-detalhe.component';
+import { AdicionarClienteComponent } from './clientes/adicionar-cliente/adicionar-cliente.component';
 
 
 
@@ -39,7 +40,8 @@ import { ProdutoDetalheComponent } from './produtos/produto-detalhe/produto-deta
     ListaProdutoComponent,
     ListaVendaComponent,
     ListaClienteComponent,
-    ProdutoDetalheComponent,  
+    ProdutoDetalheComponent,
+    AdicionarClienteComponent,  
   ],
   imports: [
     BrowserModule,

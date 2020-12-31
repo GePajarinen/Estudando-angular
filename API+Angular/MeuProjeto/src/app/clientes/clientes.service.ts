@@ -25,10 +25,15 @@ constructor(private http: HttpClient) {}
     }*/
 
     remove(id: string): Observable<{}> {
-        console.log("Ate service");
         const url = `${this.UrlServiceV2}/${id}`; // DELETE api/clientes/2
         return this.http.delete(url);
     }
+
+    /**POST:  Adicionar cliente */
+    adicionarCliente(cliente: Cliente): Observable<Cliente> {
+        return this.http.post<Cliente>(this.UrlServiceV2, cliente);
+  }
+
 
   
 
