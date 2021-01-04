@@ -1,6 +1,6 @@
 
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { User } from './user';
 
@@ -11,9 +11,16 @@ constructor(private http: HttpClient) {}
 
     protected UrlServiceV1: string = "https://jsonplaceholder.typicode.com/users";
 
+    httpOptions = {
+        headers: new HttpHeaders({
+            'Content-Type': 'application/json'
+        })
+    };
 
-    listarClientes() : Observable<User[]> {
+    listarUsers() : Observable<User[]> {
         return this.http
         .get<User[]>(this.UrlServiceV1);
     }
+
+    
 }

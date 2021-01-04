@@ -1,6 +1,9 @@
 export class User{
-id!: string;
-name!: string;
-progress!: string;
-color!: string;
+    id!: string;
+    name!: string;
+    username!: string;
+    email!: string;
+    phone!: string;
+    website!: string;
 }
+    
