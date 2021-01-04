@@ -11,6 +11,8 @@ import {MatTableModule} from '@angular/material/table';
 
 import { UsersComponent } from './users/users.component';
 import { PhotosComponent } from './photos/photos.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { PhotosComponent } from './photos/photos.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule,
+    MatCardModule
   ],
   providers: [
     
