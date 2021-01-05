@@ -14,6 +14,8 @@ import { PhotosComponent } from './photos/photos.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { PhotosService } from './photos/photos.service';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { PhotosService } from './photos/photos.service';
     MatTableModule,
     MatIconModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    NgxPaginationModule
   ],
   providers: [
     PhotosService

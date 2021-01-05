@@ -11,6 +11,7 @@ export class PhotosComponent implements OnInit {
 
   constructor( private photosService: PhotosService) { }
 
+  public paginaAtual = 1;
   public photos: Photo[] | undefined;
 
   ngOnInit() {

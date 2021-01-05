@@ -20,7 +20,8 @@
 
     <div class="row text-center">
             
-        <div *ngFor="let photo of photos" class="col-md-4" style="padding-bottom: 3%;">
+        <div *ngFor="let photo of photos | paginate: { itemsPerPage: 6, currentPage: paginaAtual }; let i = index"
+        class="col-md-4" style="padding-bottom: 3%;">
             <div class="card" style="width: 253px">
                 <a class="text-decoration-none" >
                     <div class="effect" style="align-content: center;">
@@ -31,4 +32,6 @@
             </div>
         </div>
     </div>
+    <pagination-controls (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
+
 </div>
