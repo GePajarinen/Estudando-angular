@@ -13,6 +13,7 @@ import { UsersComponent } from './users/users.component';
 import { PhotosComponent } from './photos/photos.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { PhotosService } from './photos/photos.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { MatCardModule } from '@angular/material/card';
     MatCardModule
   ],
   providers: [
+    PhotosService
     
   ],
   bootstrap: [AppComponent]

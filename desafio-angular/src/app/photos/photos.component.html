@@ -4,15 +4,31 @@
     <div class="jumbotron" style="padding-top: 20px; padding-bottom: 20px;">
         <h1 style="font-size: 40px; margin: 0px;"><i class="fa fa-camera" aria-hidden="true"></i> Fotos</h1>      
     </div>  
-    
-    <div style="padding: 2%;" >  
-        <div class="col-md-4" style="padding-bottom: 30px;">
+    <!--
+    <div  style="padding: 2%;" >  
+        <div *ngFor="let photo of photos" class="col-md-4" style="padding-bottom: 30px;">
             <mat-card class="example-card" >
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                <img mat-card-image src="{{ photo.url }}" alt="Photo of a Shiba Inu">
                 <mat-card-content>
-                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-title>{{ photo.title | titlecase }}</mat-card-title>
                 </mat-card-content>
             </mat-card>
+        </div>
+    </div>
+</div>-->
+<div class="container main-container" style="padding-top: 30px; padding-bottom: 50px;">
+
+    <div class="row text-center">
+            
+        <div *ngFor="let photo of photos" class="col-md-4" style="padding-bottom: 3%;">
+            <div class="card" style="width: 253px">
+                <a class="text-decoration-none" >
+                    <div class="effect" style="align-content: center;">
+                        <img src="{{ photo.url }}"  height="auto" width="253px" alt="">
+                    </div>
+                </a>
+                <h3 class="card-title"> {{ photo.title | titlecase }}</h3>  
+            </div>
         </div>
     </div>
 </div>
