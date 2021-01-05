@@ -15,6 +15,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { PhotosService } from './photos/photos.service';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { UsersService } from './users/users.service';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NgxPaginationModule
   ],
   providers: [
-    PhotosService
+    PhotosService,
+    UsersService
     
   ],
   bootstrap: [AppComponent]

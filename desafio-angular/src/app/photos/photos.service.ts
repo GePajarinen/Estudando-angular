@@ -10,7 +10,8 @@ export class PhotosService{
 
 constructor(private http: HttpClient) {}
 
-    protected UrlService: string = "http://localhost:3000/";
+    protected UrlService: string = "https://jsonplaceholder.typicode.com/"
+   // protected UrlService: string = "http://localhost:3000/";
 
     /*httpOptions = {
         headers: new HttpHeaders({
