@@ -25,14 +25,21 @@
                         ngModel
                         required
                         #email="ngModel"
+                        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                         >
                     </div>
                     <div style="color:red" 
-                        *ngIf="email.errors && (email.dirty || email.touched)">    
+                        *ngIf="email.errors && email.invalid && (email.dirty || email.touched)">    
                         <p *ngIf="email.errors.required">
-                            Campo E-mail obrigatório
-                        </p>
+                            Campo E-mail obrigatório</p>
+                        <p *ngIf="email.errors?.pattern">
+                            Email address is invalid</p>
                     </div>
+                   <!-- <div style="color:red" 
+                        *ngIf="email.invalid">
+                        <p *ngIf="email.errors?.pattern">
+                            Email address is invalid</p>
+                    </div>-->
 
                     <div class="mb-3">
                         <label for="password" class="form-label">Senha</label>
