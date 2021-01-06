@@ -50,18 +50,19 @@
                         >
                     </div>
                     <div style="color:red" 
-                    *ngIf="password.errors && (password.dirty || password.touched)">    
-                    <p *ngIf="password.errors.required">
-                        Campo senha obrigatório
-                    </p>
-                </div>
+                        *ngIf="password.errors && (password.dirty || password.touched)">    
+                        <p *ngIf="password.errors.required">
+                            Campo senha obrigatório
+                        </p>
+                    </div>
 
-               <div ></div>
+          
                 <button type="submit" class="btn btn-info" 
                     [disabled]='email.errors && email.invalid && password.errors.required'
-                    [routerLink]="['/usuarios']"
+                    
                     >Entrar
                 </button>
+            
             </div>
             </form>
         </div>

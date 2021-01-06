@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, FormArray, Validators, FormBuilder } from '@angular/forms';
 import { NgForm } from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,34 +10,25 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   
-  constructor() { }
+  constructor(private router:Router) { }
 
-  @ViewChild('f') courseForm!: NgForm;
+  //@ViewChild('f') loginForm!: NgForm;
 
   ngOnInit() {
    
   }
-  aprovado: string = "no";
-  public pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
-
-  autenticado(form: NgForm) {
-    if ((form.value.email = this.pattern) && (form.value.password != "")){
-      this.aprovado = "ok";
-    }
-
-
-  }
-
+  
   onSubmit(form: NgForm) {
     console.log("Email : " + form.value.email);
-    console.log("Senha : " + form.value.password);   
-    }
+    console.log("Senha : " + form.value.password);
+    this.router.navigate(['/usuarios']);
+  }
     
 
 }
 /* Escolhi o Template-Driven Forms:
   -Template-driven form manage the logic inside the template 
-  so in template-driven forms we don’t need to create FormControl 
+  so in template-driven forms we donâ€™t need to create FormControl 
   or FormGroup inside a component file.
 
   Thus, we can see that an object of type "NgForm" gets created 

@@ -8,7 +8,7 @@ import { Photo } from './photo';
 @Injectable()
 export class PhotosService{
 
-constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) {}
 
     protected UrlService: string = "https://jsonplaceholder.typicode.com/"
    // protected UrlService: string = "http://localhost:3000/";
