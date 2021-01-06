@@ -23,5 +23,10 @@ constructor(private http: HttpClient) {}
         .get<User[]>(this.UrlService + "users");
     }
 
+    getUsers() {
+        return this.http
+        .get(this.UrlService + "users");
+    }
+
     
 }
