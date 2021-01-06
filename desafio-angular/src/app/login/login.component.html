@@ -1,0 +1,49 @@
+<div class="container body">
+    
+    <div class="d-flex justify-content-center">
+        
+        <div class="col-sm-4 vertical-center">
+            
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm" >
+               
+               <p style="font-family: 'Permanent Marker'; 
+                padding-bottom: 40px; 
+                font-weight: bold; 
+                font-size: 50px; 
+                text-align: center;">  < / > </p>
+                <div class="tabela">
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Nome de usuário</label>
+                        <input 
+                        type="text" 
+                        class="form-control" 
+                        id="userName" 
+                        name="userName"
+                        ngModel
+                        required
+                        #userName="ngModel"
+                        >
+                    </div>
+                    <div style="color:red" 
+                        *ngIf="userName.errors && (userName.dirty || userName.touched)">    
+                        <p *ngIf="userName.errors.required">
+                            Nome do usuário é obrigatório
+                        </p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Senha</label>
+                        <input 
+                        type="password" 
+                        class="form-control" 
+                        id="password"
+                        name="password"
+                        ngModel
+                        >
+                    </div>
+        
+                <button type="submit" class="btn btn-primary botao">Entrar</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>

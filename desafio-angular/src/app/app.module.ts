@@ -18,6 +18,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { UsersService } from './users/users.service';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     HomeComponent,
     MenuComponent,
     UsersComponent,
-    PhotosComponent
+    PhotosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatCardModule,
     NgxPaginationModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FormsModule
     
   ],
  
