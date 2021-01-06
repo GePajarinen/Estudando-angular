@@ -15,7 +15,7 @@ import { Observable } from 'rxjs';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
-export class UsersComponent implements OnInit   {
+export class UsersComponent implements OnInit {
   users!: User[];
   displayedColumns: string[] = ['id', 'name', 'username', 'email', 'phone', 'website' ];
   dataSource = new MatTableDataSource<User>();
@@ -23,15 +23,9 @@ export class UsersComponent implements OnInit   {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   
-  constructor(private userServise: UsersService) {
-    
-  }
+  constructor(private userServise: UsersService) { }
 
-  ngOnInit() : void{
-   this.getLista();
-  }
-
-  getLista(): void {
+  ngOnInit() {
     this.userServise.listarUsers().subscribe(
       (data : any) => {
         this.dataSource = new MatTableDataSource<User>(data);
@@ -40,8 +34,7 @@ export class UsersComponent implements OnInit   {
       });
   }
 
-  
-
+ 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -50,43 +43,6 @@ export class UsersComponent implements OnInit   {
       this.dataSource.paginator.firstPage();
     }
   }
- 
-  
-
-  
-  
-  
   
 }
-
-
-
-/*
-export class UsersComponent implements OnInit{
-
-  constructor(private userServise: UsersService) {}
-  displayedColumns: string[] = ['id', 'name', 'username', 'email', 'phone', 'website' ];
-  
-  public users: User[] | undefined;
-  dataSource = this.users;
-
-
-  ngOnInit() {
-    this.userServise.listarUsers()
-      .subscribe(
-        users => {
-          this.users = users;
-          console.log(users);
-        },
-        error => console.log(error)
-      );
-  }
-}*/
-  
-  
-  
-  
-
-
-
 

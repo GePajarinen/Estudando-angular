@@ -17,6 +17,7 @@ import { PhotosService } from './photos/photos.service';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { UsersService } from './users/users.service';
 import { MatSortModule } from '@angular/material/sort';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { MatSortModule } from '@angular/material/sort';
     HttpClientModule,
     MatCardModule,
     NgxPaginationModule,
-    MatSortModule
+    MatSortModule,
+    MatPaginatorModule
     
   ],
  
