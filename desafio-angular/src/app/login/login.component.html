@@ -1,8 +1,10 @@
-<div class="container body">
-    
+<!--
+    Escolhi o Template-Driven Forms
+    fonte: https://www.pluralsight.com/guides/difference-between-template-driven-and-reactive-forms-angular/
+-->
+<div class="container body col-12">
     <div class="d-flex justify-content-center">
-        
-        <div class="col-sm-4 vertical-center">
+        <div class="col-sm-6 vertical-center justify-content-center">
             
             <form (ngSubmit)="onSubmit(f)" #f="ngForm" >
                
@@ -13,34 +15,44 @@
                 text-align: center;">  < / > </p>
                 <div class="tabela">
                     <div class="mb-3">
-                        <label for="userName" class="form-label">Nome de usuário</label>
+                        <label for="email" class="form-label">E-mail</label>
                         <input 
-                        type="text" 
+                        type="email" 
                         class="form-control" 
-                        id="userName" 
-                        name="userName"
+                        id="email" 
+                        placeholder="e-mail"
+                        name="email"
                         ngModel
                         required
-                        #userName="ngModel"
+                        #email="ngModel"
                         >
                     </div>
                     <div style="color:red" 
-                        *ngIf="userName.errors && (userName.dirty || userName.touched)">    
-                        <p *ngIf="userName.errors.required">
-                            Nome do usuário é obrigatório
+                        *ngIf="email.errors && (email.dirty || email.touched)">    
+                        <p *ngIf="email.errors.required">
+                            Campo E-mail obrigatório
                         </p>
                     </div>
+
                     <div class="mb-3">
                         <label for="password" class="form-label">Senha</label>
                         <input 
                         type="password" 
                         class="form-control" 
                         id="password"
+                        placeholder="senha"
                         name="password"
                         ngModel
+                        required
+                        #password="ngModel"
                         >
                     </div>
-        
+                    <div style="color:red" 
+                    *ngIf="password.errors && (password.dirty || password.touched)">    
+                    <p *ngIf="password.errors.required">
+                        Campo senha obrigatório
+                    </p>
+                </div>
                 <button type="submit" class="btn btn-primary botao">Entrar</button>
             </div>
             </form>
