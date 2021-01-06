@@ -57,7 +57,11 @@
                 </div>
 
                <div ></div>
-                <button type="submit" class="btn btn-info" [disabled]='email.errors && email.invalid && password.errors.required' >Entrar</button>
+                <button type="submit" class="btn btn-info" 
+                    [disabled]='email.errors && email.invalid && password.errors.required'
+                    [routerLink]="['/usuarios']"
+                    >Entrar
+                </button>
             </div>
             </form>
         </div>

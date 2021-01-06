@@ -6,6 +6,7 @@
     align-items: center;
   }
   /*
+  Fonte do vertical-center:
   https://stackoverflow.com/questions/22196587/how-to-vertically-center-a-container-in-bootstrap
   */
 
@@ -24,14 +25,14 @@
     background-color: green;
     border: 0px;
     width: 100%;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
   }
 
   button:disabled {
     background-color: #b6bfc9;
-    border: 0px;
-    width: 100%;
  }
-  /*
-  cinza do botao desativado
-  #b6bfc9
-*/
+  
+ button:hover {
+  opacity: 0.6;
+}
