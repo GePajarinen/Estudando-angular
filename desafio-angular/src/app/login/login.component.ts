@@ -1,23 +1,19 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormGroup, FormControl, FormArray, Validators, FormBuilder } from '@angular/forms';
 import { NgForm } from '@angular/forms';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   
   constructor(private router:Router) { }
 
   //@ViewChild('f') loginForm!: NgForm;
 
-  ngOnInit() {
-   
-  }
-  
   onSubmit(form: NgForm) {
     console.log("Email : " + form.value.email);
     console.log("Senha : " + form.value.password);

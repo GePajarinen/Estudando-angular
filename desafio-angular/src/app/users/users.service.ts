@@ -7,7 +7,7 @@ import { User } from './user';
 @Injectable()
 export class UsersService{
 
-constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) {}
 
     protected UrlService: string = "https://jsonplaceholder.typicode.com/";
     //protected UrlService: string = "http://localhost:3000/users"
@@ -22,5 +22,9 @@ constructor(private http: HttpClient) {}
         .get(this.UrlService + "users");
     }
 
+    getUserById(id: number): Observable<User> {
+        return this.http.get<User>(this.UrlService + 'users/' + id)
+      
+    }
     
 }

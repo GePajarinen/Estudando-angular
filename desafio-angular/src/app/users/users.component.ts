@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './user';
 import { UsersService } from './users.service';
-import { DataSource } from '@angular/cdk/collections';
-import {AfterViewInit, ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
-import { Observable } from 'rxjs';
-
+import { ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalUserComponent } from './modal-user/modal-user.component';
+import { Address } from './address';
+import { Company } from './company';
 
 
 @Component({
@@ -16,14 +17,18 @@ import { Observable } from 'rxjs';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  users!: User[];
-  displayedColumns: string[] = ['name', 'username', 'email'];
+ 
+  displayedColumns: string[] = ['name', 'username', 'email', '+'];
   dataSource = new MatTableDataSource<User>();
+  user = {} as User;
+  address = {} as Address;
+  company = {} as Company;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   
-  constructor(private userServise: UsersService) { }
+  constructor(private userServise: UsersService, 
+    public dialog: MatDialog) { }
 
   ngOnInit() {
     this.userServise.listarUsers().subscribe(
@@ -44,5 +49,19 @@ export class UsersComponent implements OnInit {
     }
   }
   
-}
+  openDialog(user: User) {
+    
+    this.dialog.open(ModalUserComponent, {
+      data: {
+        id: user.id,
+        name: user.name,
+        username: user.username,
+        email: user.email,
+        phone: user.phone,
+        website: user.website,
+        
+      }
+    });
+  }
 
+}

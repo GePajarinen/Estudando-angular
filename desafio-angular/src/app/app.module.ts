@@ -20,7 +20,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,8 @@ import { FormsModule } from '@angular/forms';
     NgxPaginationModule,
     MatSortModule,
     MatPaginatorModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
     
   ],
  
