@@ -33,7 +33,7 @@
                         <p *ngIf="email.errors.required">
                             Campo E-mail obrigatório</p>
                         <p *ngIf="email.errors?.pattern">
-                            Email address is invalid</p>
+                            E-mail inválido</p>
                     </div>
 
                     <div class="mb-3">
@@ -44,8 +44,9 @@
                         id="password"
                         placeholder="senha"
                         name="password"
-                        ngModel
-                        required
+                        ngModel minlength="4"
+                        required 
+                        
                         #password="ngModel"
                         >
                     </div>
@@ -58,7 +59,7 @@
 
           
                 <button type="submit" class="btn btn-info" 
-                    [disabled]='email.errors && email.invalid && password.errors.required'
+                    [disabled]='email.invalid || password.errors.required'
                     
                     >Entrar
                 </button>
