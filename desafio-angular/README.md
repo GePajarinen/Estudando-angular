@@ -30,7 +30,7 @@ Desenvolvemos as técnicas aprendidas na elaboração do exercício proposto.
 - [ ] Utilizar localstorage para salvar se o usuario está logado ou não 
 
 ### Usuários
-<img src="https://git.gft.com/gege/desafio-angular/-/raw/8038decc32d7334a46e977c55f642c358eacd46a/Readme-img/Usuarios.png" width="600">
+<img src="https://github.com/GePajarinen/estudando-angular/blob/master/desafio-angular/Readme-img/Usuarios.png?raw=true" width="600">
 
 
 - [X] Api que lista os usuários https://jsonplaceholder.typicode.com/users 
@@ -48,7 +48,7 @@ PLUS
 - [ ] Loading na pagina até trazer os dados da tabela 
 
 ### Fotos
-<img src="https://git.gft.com/gege/desafio-angular/-/raw/8038decc32d7334a46e977c55f642c358eacd46a/Readme-img/Fotos.png" width="600">
+<img src="https://github.com/GePajarinen/estudando-angular/blob/master/desafio-angular/Readme-img/Fotos.png?raw=true" width="600">
 
 - [X] Api que lista as fotos https://jsonplaceholder.typicode.com/photos 
 - [X] Criar cards com a imagem e o titulo da foto 
