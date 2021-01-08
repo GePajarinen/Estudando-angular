@@ -62,8 +62,14 @@ PLUS
 ---
 ## Resultado
 
-em processo ...
+### Loging   
+<img src="https://git.gft.com/gege/desafio-angular/-/raw/master/Readme-img/Recorded%20with%20FlexClip%20Screen%20Recorder.webm" >   
 
+### Usuários   
+<img src="">
+
+### Fotos   
+<img src="">
 
 ---
 
