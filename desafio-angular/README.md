@@ -15,10 +15,10 @@ Desenvolvemos as técnicas aprendidas na elaboração do exercício proposto.
 
 ### Login
 
-<img src="https://git.gft.com/gege/desafio-angular/-/raw/8038decc32d7334a46e977c55f642c358eacd46a/Readme-img/login1.png" width="600">
-<img src="https://git.gft.com/gege/desafio-angular/-/raw/8038decc32d7334a46e977c55f642c358eacd46a/Readme-img/login2.png" width="600">
-<img src="https://git.gft.com/gege/desafio-angular/-/raw/8038decc32d7334a46e977c55f642c358eacd46a/Readme-img/login3.png" width="600">
-<img src="https://git.gft.com/gege/desafio-angular/-/raw/8038decc32d7334a46e977c55f642c358eacd46a/Readme-img/login4.png" width="600">
+<img src="https://github.com/GePajarinen/estudando-angular/blob/master/desafio-angular/Readme-img/login1.png?raw=true" width="600">
+<img src="https://github.com/GePajarinen/estudando-angular/blob/master/desafio-angular/Readme-img/login2.png?raw=true" width="600">
+<img src="https://github.com/GePajarinen/estudando-angular/blob/master/desafio-angular/Readme-img/login3.png?raw=true" width="600">
+<img src="https://github.com/GePajarinen/estudando-angular/blob/master/desafio-angular/Readme-img/login4.png?raw=true" width="600">
 
 
 - [X] A tela principal deve ser um "fake login", utilizando reactive forms (formgroup / formbuilder) ou template driven forms (ngForm) (?) reactive forms x template driven forms 
